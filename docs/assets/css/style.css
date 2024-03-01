@@ -114,6 +114,9 @@ a.button:hover {
   grid-row-gap: 20px; 
   align-items: center;
 }
+.grid-list-icons svg {
+  width: 90%;
+}
 @media screen and (min-width: 870px) {
   .grid-list-icons { grid-template-columns: 120px 1fr 120px 1fr; }
 }
