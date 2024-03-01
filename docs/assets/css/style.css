@@ -121,25 +121,10 @@ a.button:hover {
 .side-nav a {
   color: #fff;
   font-weight: 700;
+  max-width: 80%;
 }
 .side-nav a:hover {
   color: var(--light-blue);
-}
-
-.side-nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0px;
-  left: 0px;
-  background-color: #000;
-  overflow-x: hidden;
-  transition: 0.5s;
 }
 
 @media screen and (max-width: 1124px) {
