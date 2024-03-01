@@ -50,6 +50,10 @@ p, span {
   text-align: justify;
 }
 
+h1 {
+  text-align: center;
+}
+
 .wrapper {
   display: flex; 
   flex-direction: column;
