@@ -96,13 +96,57 @@ a.button:hover {
   grid-gap: 12px;
   grid-template-columns: repeat(1, 1fr);
 }
-@media (min-width: 450px) {
+@media screen and (min-width: 450px) {
   .grid-4-col {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-@media (min-width: 750px) {
+@media screen and (min-width: 820px) {
   .grid-4-col {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+.grid-list-icons {
+  display: grid; 
+  grid-template-columns: 120px 1fr; 
+  grid-column-gap: 10px; 
+  grid-row-gap: 20px; 
+  align-items: center;
+}
+@media screen and (min-width: 870px) {
+  .grid-list-icons { grid-template-columns: 120px 1fr 120px 1fr; }
+}
+
+.side-nav a {
+  color: #fff;
+  font-weight: 700;
+}
+.side-nav a:hover {
+  color: var(--light-blue);
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-color: #000;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 1124px) {
+  nav svg { display: block; }
+  nav a { display: none; }
+}
+@media screen and (min-width: 1125px) {
+  nav svg { display: none; }
+  nav a { display: block; }
 }
