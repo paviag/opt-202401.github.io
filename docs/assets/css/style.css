@@ -30,6 +30,7 @@ nav a {
   color: #fff;
   border-radius: 13px;
   padding: 8px 10px 8px 10px;
+  box-sizing: border-box;
 }
 nav a:hover {
   color: #20293A;
@@ -43,6 +44,7 @@ section {
   align-items: center; 
   justify-content: center;
   width: 80%;
+  box-sizing: border-box;
 }
 
 p, span {
