@@ -111,6 +111,23 @@ a.button:hover {
   }
 }
 
+.grid-2-col {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(1, 1fr);
+  img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .grid-2-col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (min-width: 1050px) {
+  .grid-2-col img { width: 70%; }
+}
+
 .grid-list-icons {
   display: grid; 
   grid-template-columns: 120px 1fr; 
