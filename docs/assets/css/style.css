@@ -20,6 +20,7 @@ nav {
   padding: 20px;
   background-color: var(--accent); 
   text-align: center;
+  box-sizing: border-box;
 }
 
 a {
@@ -30,7 +31,6 @@ nav a {
   color: #fff;
   border-radius: 13px;
   padding: 8px 10px 8px 10px;
-  box-sizing: border-box;
 }
 nav a:hover {
   color: #20293A;
