@@ -6,7 +6,7 @@ layout: default
   
   <p><b>Objectives:</b> Our main objective is to develop Logistic Regression Models capable of predicting a test taker’s global and subject-specific ICFES performance given their socio-economic characteristics. Our secondary objective is to understand the relation between test takers’ characteristics and their ICFES performances through the development of said models.</p>
   
-  <p>For our first choice of a ML Model, we have chosen a multi-class <b>Logistic Regression Model</b>. We developed multiple such models employing the variables 'FAMI_ESTRATOVIVIENDA', 'FAMI_PERSONASHOGAR', 'FAMI_CUARTOSHOGAR', 'FAMI_NUMLIBROS', 'ESTU_DEDICACIONLECTURADIARIA', 'ESTU_DEDICACIONINTERNET', and 'ESTU_HORASSEMANATRABAJA' in order to predict test takers’ ICFES performance. This performance is divided in three levels for each subject: low for scores below 36, average for scores 36-65, and high for scores above 65. As for the global performance, the criteria for each level is: low for scores below 200, average for scores 200-300, and high for scores above 300.</p>
+  <p>For our first choice of a ML Model, we have chosen a multi-class <b>Logistic Regression Model</b>. We developed multiple such models employing the variables 'FAMI_ESTRATOVIVIENDA' (social stratum), 'FAMI_PERSONASHOGAR' (number of people residing at household), 'FAMI_CUARTOSHOGAR' (number of rooms at household), 'FAMI_NUMLIBROS' (number of books at household), 'ESTU_DEDICACIONLECTURADIARIA' (daily hours dedicated to reading), 'ESTU_DEDICACIONINTERNET' (daily hours of internet usage), 'ESTU_HORASSEMANATRABAJA' (weekly working hours), 'FAMI_COMELECHEDERIVADOS' (frequency of milk derivatives in diet), 'FAMI_COMECARNEPESCADOHUEVO' (frequency of meat, fish and eggs in diet), and 'FAMI_COMECEREALFRUTOSLEGUMBRE' (frequency of cereals, fruits and legumes in diet) in order to predict test takers’ ICFES performance. This performance is divided in three levels for each subject: low for scores below 36, average for scores 36-65, and high for scores above 65. As for the global performance, the criteria for each level is: low for scores below 200, average for scores 200-300, and high for scores above 300.</p>
   
   <p>We chose these variables as they are all numerical, relevant for our analysis, and fitting for the type of model we have picked. Having checked for the correlation between them, we found they are not linearly dependent.</p>
   
@@ -14,7 +14,7 @@ layout: default
   
   <p>For the <b>validation method</b>, we will be using <b>k-fold cross validation</b>, which involves dividing the data in <i>k</i> sections, training the model in <i>k-1</i> of them and testing it on the remaining section. This process is repeated <i>k</i> times, and each section acts as test data once. The final validation metrics will be the average of the metrics throughout the <i>k</i> iterations. For our situation, <i>k</i> will take the value of 5, and the method will be <i>stratified</i>, meaning that we will make sure all classes are proportionally represented in each fold.</p>
   
-  <p style="align-self: start">For the <b>validation metric</b>, we will be using:</p>
+  <p style="align-self: start; margin-bottom: -10px;">For the <b>validation metrics</b>, we will be using:</p>
   <ul> 
   <li><b>Accuracy:</b> The result of dividing the number of accurate predictions by the total number of predictions made. The closer the value is to 1, the more accurate (better) the model is. </li>
   <li><b>Precision:</b> Percentage of correct positive predictions relative to total positive predictions.</li>
@@ -82,7 +82,7 @@ layout: default
   
   <img src="assets/images/graphs/coeff_i.png" style="width: 100%;">
   
-  <p style="align-self: start; margin-top: -15px;">From the analysis of coefficients, we conclude that:</p> 
+  <p style="align-self: start; margin-top: -15px; margin-bottom: -10px;">From the analysis of coefficients, we conclude that:</p> 
   <ul>
     <li>The influence of the subject on prediction is minimal.</li>
     <li>The most predictive factors of performance level include the number of weekly working hours and the quantity of books at home, with internet usage hours following closely. Notably, the number of working hours has the highest influence of all.</li>
