@@ -4,28 +4,29 @@ layout: default
 <section>
   <h1>Machine Learning Model Selection II</h1>
   
-  <p>In this second model we develop a Multi-Layer Perceptron (MLP) models that can predict students' overall and subject-specific ICFES test performance based on their socioeconomic characteristics. The secondary objective is to understand the relationship between these characteristics and test scores by developing such models.</p>
+  <p>In this second model, our goal was to develop Multi-Layer Perceptron (MLP) models that can predict students' overall and subject-specific ICFES test performance based on their socioeconomic characteristics. </p>
   
-  <p>We chose MLPClassifier as our machine learning model. For its development, we used variables such as</p>
+  <p style="align-self: start">We chose MLPClassifier as our machine learning model. For its development, we used variables such as</p>
 
   <img src="assets/images/graphs/model_MLP.png" style="width: 80%;">
   <br>
   <br>
   <img src="assets/images/graphs/arqui.svg" style="width: 80%;">
 
-  <p>Performance on the test is classified into three levels:<br>low (scores below 36)<br>medium (scores between 36-65)<br>high (scores above 65).<br><br>For overall performance, the criteria are:<br>low (scores below 200)<br>medium (scores between 200-300)<br>high (scores above 300).</p>
-
+  <p style="align-self: start">Subject-specific performance on the test is classified into three levels:<br>low (scores below 36)<br>medium (scores between 36-65)<br>high (scores above 65).<br><br>For overall performance, the criteria are:<br>low (scores below 200)<br>medium (scores between 200-300)<br>high (scores above 300).</p>
   
   <p>We chose these variables as they are all numerical, relevant for our analysis, and fitting for the type of model we have picked. Having checked for the correlation between them, we found they are not linearly dependent.</p>
 
+  <p style="align-self: start; margin-bottom: -10px;">For the <b>validation method</b>, we will be employing stratified train-test splits.</p>
   
-  <p style="align-self: start">For the <b>validation metric</b>, we will be using:</p>
+  <p style="align-self: start; margin-bottom: -10px;">For the <b>validation metrics</b>, we will be using:</p>
   <ul> 
   <li><b>Accuracy:</b> The result of dividing the number of accurate predictions by the total number of predictions made. The closer the value is to 1, the more accurate (better) the model is. </li>
   <li><b>Precision:</b> Percentage of correct positive predictions relative to total positive predictions.</li>
   <li><b>Recall:</b> Percentage of correct positive predictions relative to total actual positives.</li>
   <li><b>F1-score:</b> A weighted harmonic mean of precision and recall. The closer the value is to 1, the better the model.</li>
   </ul>
+  
 </section>
 
 <section>
@@ -81,12 +82,14 @@ layout: default
     <span class="dot" onclick="currentSlide(6)"></span> 
   </div>
   
-  <p>with the validation metrics, comparing the performance of both models, the accuracy, precision and recall are very similar, although with this second MLP model there is a slight increase of about 5% with respect to the first model, except for one where the value of 0 is still at 0 for the prediction. </p>
+  <p>Comparing the performance of both models, the accuracy, precision and recall are very similar, although with this second MLP model there is a slight increase of about 5% with respect to the first model, except for one where the value of 0 is still at 0 for the prediction. </p>
   
-  <p style="align-self: start; margin-top: -15px;">From the analysis of coefficients, we conclude that:</p> 
+  <p style="align-self: start; margin-top: -15px;">From the analysis of graphs and coefficients, we conclude that:</p> 
   <ul>
-    <li>all the conclusions of the first model are valid for this second model that by not varying so much the validation metrics</li>
-    <li>it would be necessary to retouch the hyperparameters of the network to see changes in the results</li>
+    <li>All the conclusions of the first model on the influence that input variables have on performance are valid for this second model, given the similar results of the validation metrics. Although the results appear cloudy, it does appear that the input variables have an influence on performance.</li>
+    <li>We cannot quantify the influence of specific input variables as before given the complexity of functions in neural networks.</li>
+    <li>It would be necessary to retouch the hyperparameters of the network to see changes in the results. However, they changed very little in our different attempts to do so.</li>
+    <li>All conclusions about the first model's quality apply to the second model as well. The most pressing issue remains the uneven class distribution, so improving any model related to this topic would require diversifying the dataset.</li>
   </ul>
   
 </section>
